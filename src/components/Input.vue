@@ -6,9 +6,8 @@
       <hr>
       <span>Texto: <input type="text" :style="style(color,fondo,size)" v-model="texto"/></span>
       <hr>
-      <span>Cantidad de palanras: {{count}}</span>
+      <span>Cantidad de palabras: {{count}}</span>
       <Answers></Answers>
-
   </section>
 </template>
 
