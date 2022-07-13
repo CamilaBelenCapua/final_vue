@@ -4,19 +4,22 @@
       <span>Fondo: <input type="text" v-model="fondo"/></span>
       <span>Size: <input type="text" v-model="size"/></span>
       <hr>
-      <span>Texto: <input type="text" :style="style(color,fondo,size)" v-model="texto"/></span>
+      <span>Texto: <input type="text" id= "input" :style="style(color,fondo,size)" v-model.trim="texto"/></span>
       <hr>
-      <span>Cantidad de palabras: {{count}}</span>
+      <InputSon :input = this.texto></InputSon>
       <Answers></Answers>
   </section>
 </template>
 
 <script>
 import Answers from './Answers.vue'
+import InputSon from './InputSon.vue'
+
 export default {
   name: 'src-components-Input',
   components : {
-      Answers
+      Answers,
+      InputSon
     },
   props: [],
   mounted () {
